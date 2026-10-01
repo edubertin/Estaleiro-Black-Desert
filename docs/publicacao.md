@@ -26,3 +26,5 @@ Site público: https://estaleiro-black-desert.edubertin.chatgpt.site
 GitHub: https://github.com/edubertin/Estaleiro-Black-Desert
 Domínio estaleiro.io vinculado e aguardando DNS/SSL. Card social ilustrado por IA: carracas no mar, logo dourado, 1730 × 909.
 
+
+Domínio público https://estaleiro.io ativo com HTTPS. Favicon com barco dourado e rodapé Criado por @edubertin (Instagram), ícone GitHub e copyright publicados e conferidos visualmente. Revisão de integração em main autorizada pelo usuário em 01/10/2026.

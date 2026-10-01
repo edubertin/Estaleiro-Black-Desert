@@ -11,6 +11,7 @@ import type { Project } from './core/schema.ts';
 import { button, element, modal } from './ui.ts';
 import { renderSelection, renderOrigin } from './selection.ts';
 import { renderJourney } from './journey.ts';
+import { creatorFooter } from './footer.ts';
 
 const root = document.getElementById('app');
 if (!root) throw new Error('Elemento raiz indisponível');
@@ -170,6 +171,7 @@ function render(): void {
   shell.append(header());
   const banner = catalogBanner(); if (banner) shell.append(banner);
   shell.append(content());
+  if (view === 'select') shell.append(creatorFooter());
   if (error) {
     const status = element('p', 'status error', error); status.setAttribute('role', 'alert');
     shell.append(status);

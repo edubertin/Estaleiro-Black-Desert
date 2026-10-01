@@ -6,7 +6,7 @@ Estado: aceito pelo pedido de publicação do usuário. 01/10/2026.
 
 Publicar o código no repositório público Estaleiro-Black-Desert do GitHub de Eduardo e servir o build estático Vite nos Sites do GPT com acesso público. Preservar a marca Estaleiro Black Desert. Não adicionar servidor, conta ou integração com o jogo.
 
-O código fonte revisável e a documentação ficam no GitHub. O checkout de hospedagem separado contém o export estático e `.openai/hosting.json`; não compartilha credenciais nem Git com o repositório principal. Publicações usam o workflow oficial do plugin Sites. Metadados Open Graph e Twitter Card apontam para imagem PNG 1200 × 630 com o logo.
+O código fonte revisável e a documentação ficam no GitHub. O checkout de hospedagem separado contém o export estático e `.openai/hosting.json`; não compartilha credenciais nem Git com o repositório principal. Publicações usam o workflow oficial do plugin Sites. Metadados Open Graph e Twitter Card apontam para imagem PNG 1730 × 909 com o logo e carracas no mar.
 
 ## Consequências
 

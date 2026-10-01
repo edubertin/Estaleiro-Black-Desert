@@ -1,6 +1,6 @@
 # Estaleiro — primeiro plano de implementação
 
-Data: 01/10/2026. Execução local posteriormente autorizada por Eduardo. Specs 002–004, ADRs 004/005, motor, interface e origens Improved implementados; Figma criado e preservado por preferência do usuário. Fase 02 executada com catálogo SA baseado em fontes oficiais, PNGs e QA de navegador; ver `plano-fase-02-interface-catalogo.md`. Tabelas de fases abaixo preservam o planejamento inicial e devem ser lidas junto ao estado atual em PROJECT. Commits e publicação continuam fora da autorização atual.
+Data: 01/10/2026. Execução local posteriormente autorizada por Eduardo. Specs 002–004, ADRs 004/005, motor, interface e origens Improved implementados; Figma criado e preservado por preferência do usuário. Fase 02 executada com catálogo SA baseado em fontes oficiais, PNGs e QA de navegador; ver `plano-fase-02-interface-catalogo.md`. Tabelas de fases abaixo preservam o planejamento inicial e devem ser lidas junto ao estado atual em PROJECT. Este plano é histórico. O MVP foi publicado; estado atual e autorização de publicação estão registrados em PROJECT.md e docs/publicacao.md.
 
 ## Resultado esperado
 
