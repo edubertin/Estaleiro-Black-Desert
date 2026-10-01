@@ -1,0 +1,15 @@
+output/
+node_modules/
+dist/
+coverage/
+.playwright-cli/
+test-results/
+playwright-report/
+.codex/
+.sites-runtime/
+.env
+.env.*
+*.pem
+*.key
+n.width
+([{]label
