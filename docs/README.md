@@ -2,6 +2,9 @@
 
 ## Sistema atual
 
+- [Página inicial](specs/005-pagina-inicial.md)
+- [Decisão de animação](adr/007-landing-motion.md)
+- [Revisão da landing](qa-revisao-landing.md)
 - [Projeto e comandos](../PROJECT.md)
 - [Jornada](specs/001-jornada-carraca.md)
 - [Catálogo](specs/002-catalogo.md)

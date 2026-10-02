@@ -28,3 +28,7 @@ Domínio estaleiro.io vinculado e aguardando DNS/SSL. Card social ilustrado por 
 
 
 Domínio público https://estaleiro.io ativo com HTTPS. Favicon com barco dourado e rodapé Criado por @edubertin (Instagram), ícone GitHub e copyright publicados e conferidos visualmente. Revisão de integração em main autorizada pelo usuário em 01/10/2026.
+
+## Página inicial — revisão de 02/10/2026
+
+Landing marítima antes do planejador, em #/carracas. Marinheiros e acessórios permanecem em preparação. Revisão em qa-revisao-landing.md; spec 005 e ADR 007 descrevem o contrato atual. Publicação pública e envio de branch/PR draft autorizados nesta rodada; sem merge automático.

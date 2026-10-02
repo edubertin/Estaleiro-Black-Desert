@@ -4,6 +4,7 @@ Planeje uma das quatro carracas de Black Desert PC SA: escolha seu destino e bar
 
 ## Funcionalidades
 
+- Página inicial marítima animada, com redução de movimento e entrada no planejador.
 - Gradual, Equilíbrio, Emergência/Ascensão e Bravura, com origens compatíveis.
 - Materiais com quantidade editável e controles +/−; equipamentos de +0 até +10.
 - Linha do tempo e disponibilidade calculada sem contar estoque duas vezes.

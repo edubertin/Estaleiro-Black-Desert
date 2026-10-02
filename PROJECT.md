@@ -1,6 +1,6 @@
 # Estaleiro
 
-Atualizado em 01/10/2026.
+Atualizado em 02/10/2026.
 
 ## Identidade e estado
 
@@ -9,6 +9,8 @@ Aplicação web para jogadores de Black Desert PC planejarem uma das quatro carr
 Fase: MVP funcional com slots ilustrados, graus exatos de equipamentos, origens compatíveis e timeline. Catálogo SA de oito receitas conferidas nas fontes oficiais; demo antiga preservada por versão. Não houve inspeção direta do cliente do jogo; ver `docs/catalogo-evidencias-sa.md`. Publicação pública autorizada em 01/10/2026; ver `docs/publicacao.md`.
 
 ## Escopo aceito
+
+Entrada marítima na raiz; planejador em `#/carracas`. Marinheiros e acessórios apresentam avisos de preparação. Ver spec 005, ADR 007 e `docs/qa-revisao-landing.md`.
 
 Escolha de destino → ponto de partida → jornada por etapas → materiais e equipamentos necessários → confirmação manual da evolução → carraca construída.
 
