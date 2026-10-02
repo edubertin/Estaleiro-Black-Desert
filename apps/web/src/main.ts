@@ -12,6 +12,7 @@ import { button, element, modal } from './ui.ts';
 import { renderSelection, renderOrigin } from './selection.ts';
 import { renderJourney } from './journey.ts';
 import { creatorFooter } from './footer.ts';
+import { renderLanding } from './landing.ts';
 
 const root = document.getElementById('app');
 if (!root) throw new Error('Elemento raiz indisponível');
@@ -21,6 +22,11 @@ let destination: string | null = null;
 let view: 'select' | 'origin' | 'journey' = 'select';
 let notice = 'Seu progresso é salvo neste navegador.';
 let error = '';
+let landingCleanup: (() => void) | null = null;
+
+function enterPlanner(): void {
+  location.hash = '/carracas';
+}
 
 function fail(problem: unknown): void {
   error = problem instanceof ZodError ? 'Dados inválidos. Confira os valores ou o arquivo de backup.'
@@ -108,6 +114,7 @@ function resetProgress(): void {
     localStorage.removeItem('estaleiro-project-v1');
     activateCatalog(saCatalog);
     project = null; destination = null; view = 'select'; error = '';
+    location.hash = '';
     render();
   });
 }
@@ -136,6 +143,7 @@ function header(): HTMLElement {
     () => run(exportFile), 'M12 15V3m-4 4 4-4 4 4M4 15v5h16v-5'));
   tools.append(backupButton('Importar backup', importFile, 'M12 3v12m-4-4 4 4 4-4M4 15v5h16v-5'));
   node.append(tools);
+  tools.prepend(button('← Início', () => { location.hash = ''; }, 'help'));
   return node;
 }
 function catalogBanner(): HTMLElement | null {
@@ -163,6 +171,13 @@ function content(): HTMLElement {
   return node;
 }
 function render(): void {
+  landingCleanup?.();
+  landingCleanup = null;
+  if (location.hash !== '#/carracas') {
+    app.replaceChildren();
+    landingCleanup = renderLanding(app, enterPlanner, project !== null);
+    return;
+  }
   const active = document.activeElement;
   const focusedKey = active instanceof HTMLElement
     ? active.dataset.focusKey ?? active.getAttribute('aria-label') : null;
@@ -184,3 +199,4 @@ run(() => {
   if (project) view = 'journey';
   render();
 });
+window.addEventListener('hashchange', render);
