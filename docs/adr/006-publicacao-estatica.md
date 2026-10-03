@@ -14,7 +14,7 @@ localStorage pertence à origem do site. Um projeto salvo no endereço local nã
 
 Novos backups usam formato 2; importação aceita formato 1 e normaliza ready-10 para 10, preservando missing e below-10 desconhecido. Catálogo não é convertido entre versões.
 
-Não adicionar licença que conceda direitos sobre artes, marcas ou referências oficiais de terceiros. O projeto é comunitário e independente. Otimização de imagens e revisão direta no cliente SA ficam como melhorias futuras, sem afirmar homologação oficial.
+Não adicionar licença que conceda direitos sobre artes, marcas ou referências oficiais de terceiros. O projeto é comunitário e independente. Oito assets da entrada foram otimizados sem perda em 03/10/2026, conforme ADR 008. Revisão direta no cliente SA permanece pendente, sem afirmar homologação oficial.
 
 ## Operação
 

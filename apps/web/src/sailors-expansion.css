@@ -1,0 +1,23 @@
+.sailor-expanded{left:23%;bottom:13%}
+.sailor-expanded.sailor-goblin{height:50%}
+.sailor-expanded.sailor-human{height:66%}
+.sailor-expanded.sailor-giant{height:74%}
+.sailor-expanded .sailor-sprite{flex-shrink:0;width:auto;max-width:none}
+.sailor-expanded .sailor-body{clip-path:none}
+.sailor-expanded .sailor-body,.sailor-expanded .sailor-blink{filter:saturate(.86) brightness(.8) contrast(1.04)}
+.sailor-expanded .sailor-blink{transform:none;mask-image:radial-gradient(ellipse 2.5% .8% at var(--eye-left) var(--eye-y),#000 75%,transparent 100%),radial-gradient(ellipse 2.5% .8% at var(--eye-right) var(--eye-y),#000 75%,transparent 100%)}
+.sailor-expanded .sailor-breath{mask-image:linear-gradient(transparent 24%,#000 31%,#000 45%,transparent 55%);transform-origin:50% 50%}
+.sailor-59053{--eye-left:44%;--eye-right:52.4%;--eye-y:12.1%}
+.sailor-59054{--eye-left:44%;--eye-right:52.5%;--eye-y:12%}
+.sailor-59056{--eye-left:44%;--eye-right:53.5%;--eye-y:15.4%}
+.sailor-59063{--eye-left:46.6%;--eye-right:51.5%;--eye-y:9.4%}
+.sailor-59064{--eye-left:45.7%;--eye-right:51.1%;--eye-y:9.2%}
+.sailor-59065{--eye-left:46.4%;--eye-right:51.7%;--eye-y:8.7%}
+.sailor-59068{--eye-left:45.9%;--eye-right:50.9%;--eye-y:9.5%}
+.sailor-59070{--eye-left:46.3%;--eye-right:51.3%;--eye-y:7%}
+.sailor-59069{--eye-left:45.4%;--eye-right:51.2%;--eye-y:11.9%}
+.sailor-59071{--eye-left:43.6%;--eye-right:49%;--eye-y:10.2%}
+.sailor-59072{--eye-left:46.9%;--eye-right:52%;--eye-y:7.2%}
+.sailor-59101{--eye-left:47%;--eye-right:52.4%;--eye-y:9.1%}
+@media(max-width:1199px){.sailor-expanded{left:27%}}
+@media(max-width:600px){.sailor-expanded{left:28%;bottom:9%}.sailor-expanded.sailor-goblin{height:38%}.sailor-expanded.sailor-human{height:43%}.sailor-expanded.sailor-giant{height:46%}}

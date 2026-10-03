@@ -1,6 +1,6 @@
 # ADR 002 — Identidade de item separada da localização
 
-Estado: aceito como requisito de domínio por Eduardo. Data: 01/10/2026. Formato de armazenamento ainda a definir.
+Estado: aceito como requisito de domínio por Eduardo. Data: 01/10/2026. Formato atual definido na spec 004 e ADR 005; IDs estáveis persistem no backup, separados dos nomes de apresentação.
 
 ## Contexto
 

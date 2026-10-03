@@ -1,6 +1,6 @@
 # Estaleiro
 
-Atualizado em 01/10/2026.
+Atualizado em 03/10/2026.
 
 ## Identidade e estado
 
@@ -9,6 +9,8 @@ Aplicação web para jogadores de Black Desert PC planejarem uma das quatro carr
 Fase: MVP funcional com slots ilustrados, graus exatos de equipamentos, origens compatíveis e timeline. Catálogo SA de oito receitas conferidas nas fontes oficiais; demo antiga preservada por versão. Não houve inspeção direta do cliente do jogo; ver `docs/catalogo-evidencias-sa.md`. Publicação pública autorizada em 01/10/2026; ver `docs/publicacao.md`.
 
 ## Escopo aceito
+
+Entrada marítima na raiz; planejador em `#/carracas`. Gerir Marinheiro abre `/marinheiros-preview.html`, com retorno à raiz pelo logo, preservando o progresso das carracas. O build inclui as duas entradas. Coleção de 21 marinheiros, quatro visíveis por vez, avanço de dois slots. Dados comunitários de nível 10 com fontes e confirmação SA pendente. Acessórios mantém aviso de preparação. Cenas esperam a decodificação de imagens e usam transições de abertura/fechamento. Ver specs 005/006, ADRs 007/008 e `docs/qa-revisao-final.md`.
 
 Escolha de destino → ponto de partida → jornada por etapas → materiais e equipamentos necessários → confirmação manual da evolução → carraca construída.
 
@@ -31,7 +33,7 @@ Fonte em `apps/web/`, catálogo editorial em `apps/web/src/content/`, imagens em
 
 ## Comandos e validação
 
-Instalação: `npm install`. Dev: `npm run dev -- --port 5173`. Build: `npm run build`. Preview do build: `npm run preview`. Tipagem: `npm run typecheck`. Testes: `npm test`. Check conjunto: `npm run check`. Sem comando lint. Fonte em `apps/web/src/`; fixtures e demoCatalog explicitamente ilustrativos. Catálogo editorial em `content/`, adaptador `sa-catalog.ts` e registro de versões em `catalog-context.ts`. 33 testes passaram; QA recente em `docs/equipamentos-graus.md` e `docs/publicacao.md`.
+Instalação: `npm ci`. Dev: `npm run dev -- --port 5173`. Build: `npm run build`. Preview do build: `npm run preview`. Tipagem: `npm run typecheck`. Testes: `npm test`. Check conjunto: `npm run check`. Sem comando lint. Fonte em `apps/web/src/`; fixtures e demoCatalog explicitamente ilustrativos. Catálogo editorial em `content/`, adaptador `sa-catalog.ts` e registro de versões em `catalog-context.ts`. 41 testes passaram na revisão de 03/10; QA atual em `docs/qa-revisao-final.md`.
 
 ## Limites
 

@@ -1,0 +1,210 @@
+{
+  "retrievedAt": "2026-10-03",
+  "level": 10,
+  "status": "community-reference-not-SA-validated",
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1CFJOgyhnw2_Rq4UM2zs2uK6J15nipv1LiwrDQUWxU0o/edit",
+  "sourceTitle": "BDO Sailors 2024 - Public v1.0",
+  "sha256": "3c92b0b6b9d443b3c665b69e6f2a918eeb887a704849aca0b0ff015612eca03d",
+  "candidates": [
+    {
+      "sourceName": "Ambitious",
+      "gameId": 59053,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Ambitious"
+    },
+    {
+      "sourceName": "Diligent",
+      "gameId": 59054,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Diligent"
+    },
+    {
+      "sourceName": "Enamored",
+      "gameId": 59056,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Enamored"
+    },
+    {
+      "sourceName": "Innocent",
+      "gameId": 59055,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Innocent"
+    },
+    {
+      "sourceName": "Quick",
+      "gameId": 59057,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Quick"
+    },
+    {
+      "sourceName": "Calculating",
+      "gameId": 59058,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Calculating"
+    },
+    {
+      "sourceName": "Treasure-Seeking",
+      "gameId": 59059,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Treasure-Seeking"
+    },
+    {
+      "sourceName": "Realistic",
+      "gameId": 59060,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Realistic"
+    },
+    {
+      "sourceName": "Confident",
+      "gameId": 59061,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Confident"
+    },
+    {
+      "sourceName": "Tenacious",
+      "gameId": 59062,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Tenacious"
+    },
+    {
+      "sourceName": "Honest",
+      "gameId": 59063,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Honest"
+    },
+    {
+      "sourceName": "Tough",
+      "gameId": 59064,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Tough"
+    },
+    {
+      "sourceName": "Strong",
+      "gameId": 59065,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Strong"
+    },
+    {
+      "sourceName": "Experienced",
+      "gameId": 59066,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Experienced"
+    },
+    {
+      "sourceName": "Curious",
+      "gameId": 59067,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Curious"
+    },
+    {
+      "sourceName": "Dreaming of a Full Haul",
+      "gameId": 59068,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Dreaming of a Full Haul"
+    },
+    {
+      "sourceName": "Born on the Sea",
+      "gameId": 59070,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Born on the Sea"
+    },
+    {
+      "sourceName": "Powerful",
+      "gameId": 59069,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Powerful"
+    },
+    {
+      "sourceName": "Smart",
+      "gameId": 59071,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Smart"
+    },
+    {
+      "sourceName": "Quick-Witted",
+      "gameId": 59072,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Quick-Witted"
+    },
+    {
+      "sourceName": "Arkahn",
+      "gameId": 59101,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Arkahn"
+    },
+    {
+      "sourceName": "Hetario",
+      "gameId": 59227,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Hetario"
+    },
+    {
+      "sourceName": "Pacuna",
+      "gameId": 59228,
+      "regionValidation": "pending-SA",
+      "sourceSheet": "Pacuna"
+    }
+  ],
+  "puro": {
+    "gameId": 59055,
+    "sourceSheet": "Innocent",
+    "ranges": [
+      {
+        "sourceAttribute": "Endurance (Speed)",
+        "minimum": 2.8,
+        "maximum": 4,
+        "minimumCell": "M22",
+        "maximumCell": "M32"
+      },
+      {
+        "sourceAttribute": "Wits (Acceleration)",
+        "minimum": 1.2,
+        "maximum": 1.6,
+        "minimumCell": "M23",
+        "maximumCell": "M33"
+      },
+      {
+        "sourceAttribute": "Awareness (Turn)",
+        "minimum": 1.4,
+        "maximum": 2.5,
+        "minimumCell": "M24",
+        "maximumCell": "M34"
+      },
+      {
+        "sourceAttribute": "Strength (Brake)",
+        "minimum": 1.4,
+        "maximum": 2.5,
+        "minimumCell": "M25",
+        "maximumCell": "M35"
+      },
+      {
+        "sourceAttribute": "Patience (Reload)",
+        "minimum": 0,
+        "maximum": 0,
+        "minimumCell": "M26",
+        "maximumCell": "M36"
+      },
+      {
+        "sourceAttribute": "Force (Range)",
+        "minimum": 0,
+        "maximum": 0,
+        "minimumCell": "M27",
+        "maximumCell": "M37"
+      },
+      {
+        "sourceAttribute": "Focus (Accuracy)",
+        "minimum": 0,
+        "maximum": 0,
+        "minimumCell": "M28",
+        "maximumCell": "M38"
+      },
+      {
+        "sourceAttribute": "Vision (Angle)",
+        "minimum": 0,
+        "maximum": 0,
+        "minimumCell": "M29",
+        "maximumCell": "M39"
+      }
+    ]
+  }
+}
