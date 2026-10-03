@@ -1,6 +1,6 @@
 # Expansão da prévia de marinheiros
 
-Data: 03/10/2026. Plano solicitado por Eduardo. Desenvolvimento local na página independente `marinheiros-preview.html`; sem publicação ou integração ao menu principal nesta fase.
+Data: 03/10/2026. Plano solicitado por Eduardo. Registro do planejamento da expansão; a implementação atual já conecta `marinheiros-preview.html` à landing. Estado vigente em spec 006 e `prototipo-marinheiros.md`; QA final em `qa-revisao-final.md`. As etapas abaixo preservam o contexto de fabricação e validação.
 
 ## Base disponível
 
