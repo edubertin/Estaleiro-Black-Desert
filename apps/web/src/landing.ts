@@ -1,6 +1,10 @@
 import './landing.css';
+import { revealPreparedScene } from './scene-loading.ts';
 import { button, element, modal } from './ui.ts';
 import { creatorFooter } from './footer.ts';
+const landingAssets = ['landing-background-v2', 'landing-ship', 'landing-ship-green', 'landing-ship-red',
+  'landing-logo', 'menu-wheel-transparent-v1', 'menu-crew-transparent-v1', 'menu-accessories-transparent-v1']
+  .map(name => `/${name}.webp`);
 
 function navigation(onEnter: () => void): HTMLElement {
   const header = element('header', 'landing-header');
@@ -35,10 +39,11 @@ function trackVisibility(page: HTMLElement): () => void {
 
 export function renderLanding(parent: HTMLElement, onEnter: () => void, hasProject: boolean): () => void {
   const page = element('div', 'landing-page');
+  const enterProduction = (): void => { void leaveLanding(page, onEnter); };
   const hero = element('main', 'landing-hero');
   const title = element('h1', 'landing-screen-reader', 'Estaleiro Black Desert');
   const image = element('img', 'landing-art');
-  image.src = '/landing-background-v2.png'; image.alt = 'Costa e oceano ao pôr do sol';
+  image.src = '/landing-background-v2.webp'; image.alt = 'Costa e oceano ao pôr do sol';
   image.width = 1730; image.height = 909; image.fetchPriority = 'high';
   const light = element('div', 'landing-sunlight'); light.setAttribute('aria-hidden', 'true');
   const atmosphere = element('div', 'landing-atmosphere'); atmosphere.setAttribute('aria-hidden', 'true');
@@ -46,22 +51,23 @@ export function renderLanding(parent: HTMLElement, onEnter: () => void, hasProje
   const weather = element('div', 'landing-weather'); weather.setAttribute('aria-hidden', 'true');
   weather.append(element('div', 'landing-mist'), element('div', 'landing-rays'), element('div', 'landing-water-shimmer'));
   const ship = element('img', 'landing-foreground-ship');
-  ship.src = '/landing-ship.png'; ship.alt = 'Carraca dourada';
+  ship.src = '/landing-ship.webp'; ship.alt = 'Carraca dourada';
   ship.width = 1730; ship.height = 909;
   const logo = element('img', 'landing-floating-logo');
-  logo.src = '/landing-logo.png'; logo.alt = 'Estaleiro Black Desert';
+  logo.src = '/landing-logo.webp'; logo.alt = 'Estaleiro Black Desert';
   const cleanup = trackVisibility(page);
-  hero.append(title, image, light, atmosphere, reflection, weather, distantShip('green'), distantShip('red'), ship, element('div', 'landing-foam'), logo, element('div', 'landing-logo-reflection'), menuControls(onEnter, hasProject));
+  hero.append(title, image, light, atmosphere, reflection, weather, distantShip('green'), distantShip('red'), ship, element('div', 'landing-foam'), logo, element('div', 'landing-logo-reflection'), menuControls(enterProduction, hasProject));
   const caption = element('div', 'landing-caption-strip');
   caption.setAttribute('aria-hidden', 'true');
   caption.append(element('span', 'landing-production-caption caption-production', 'PRODUÇÃO DE CARRACAS'), element('span', 'landing-production-caption caption-sailors', 'GERIR MARINHEIRO'), element('span', 'landing-production-caption caption-accessories', 'ACESSÓRIOS'));
-  page.append(navigation(onEnter), hero, caption, creatorFooter());
+  page.append(navigation(enterProduction), hero, caption, creatorFooter());
   parent.append(page);
-  return cleanup;
+  const cleanupLoading = revealPreparedScene(page, landingAssets, () => enterLanding(page));
+  return (): void => { cleanup(); cleanupLoading(); };
 }
 function distantShip(color: 'green' | 'red'): HTMLImageElement {
   const ship = element('img', `landing-distant-ship landing-distant-${color}`);
-  ship.src = `/landing-ship-${color}.png`;
+  ship.src = `/landing-ship-${color}.webp`;
   ship.alt = '';
   ship.width = 1730; ship.height = 909;
   return ship;
@@ -83,7 +89,9 @@ function bindMenuCaption(control: HTMLButtonElement, name: string): void {
 }
 function menuControls(onEnter: () => void, hasProject: boolean): HTMLElement {
   const controls = element('div', 'landing-menu-controls');
-  const sailors = button('', () => modal('Gerir Marinheiro', 'O gerenciador de marinheiros está em preparação.'), 'landing-sailors');
+  const sailors = button('', () => {
+    void leaveLanding(controls, () => window.location.assign('/marinheiros-preview.html'));
+  }, 'landing-sailors');
   sailors.setAttribute('aria-label', 'Gerir Marinheiro');
   const portrait = element('span', 'landing-sailors-art');
   portrait.setAttribute('aria-hidden', 'true');
@@ -99,4 +107,44 @@ function menuControls(onEnter: () => void, hasProject: boolean): HTMLElement {
   bindMenuCaption(accessories, 'accessories');
   controls.append(production, sailors, accessories);
   return controls;
+}
+function fadeLandingPart(page: HTMLElement, selector: string, delay = 0): Promise<void> {
+  const target = page.querySelector<HTMLElement>(selector);
+  if (!target) return Promise.resolve();
+  return target.animate([{ opacity: getComputedStyle(target).opacity }, { opacity: 0 }], {
+    duration: 300, delay, easing: 'ease-in-out', fill: 'forwards',
+  }).finished.then(() => undefined);
+}
+async function leaveLanding(control: HTMLElement, navigate: () => void): Promise<void> {
+  const page = control.closest<HTMLElement>('.landing-page');
+  const hero = page?.querySelector<HTMLElement>('.landing-hero');
+  if (!page || !hero || page.dataset.leaving === 'true') return;
+  page.dataset.leaving = 'true';
+  page.inert = true;
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const closing = hero.animate([
+      { clipPath: getComputedStyle(hero).clipPath, opacity: getComputedStyle(hero).opacity },
+      { clipPath: 'inset(50% 0% 50% 0%)', opacity: 0 },
+    ], { duration: 650, delay: 150, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
+    await Promise.all([
+      closing.finished, fadeLandingPart(page, '.landing-header'),
+      fadeLandingPart(page, '.landing-menu-controls'), fadeLandingPart(page, '.landing-caption-strip'),
+      fadeLandingPart(page, '.landing-floating-logo', 100),
+      fadeLandingPart(page, '.landing-logo-reflection', 100),
+    ]);
+  }
+  if (page.isConnected) navigate();
+}
+function enterLanding(page: HTMLElement): void {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  page.querySelector<HTMLElement>('.landing-hero')?.animate([
+    { clipPath: 'inset(50% 0% 50% 0%)', opacity: 0 },
+    { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 },
+  ], { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'backwards' });
+  for (const selector of ['.landing-header', '.landing-menu-controls', '.landing-caption-strip',
+    '.landing-floating-logo', '.landing-logo-reflection']) {
+    page.querySelector<HTMLElement>(selector)?.animate([{ opacity: 0 }, { opacity: 1 }], {
+      duration: 350, delay: 250, easing: 'ease-in-out', fill: 'backwards',
+    });
+  }
 }

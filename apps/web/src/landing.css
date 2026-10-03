@@ -590,7 +590,7 @@ to{
   height:70%;
   z-index:4;
   pointer-events:none;
-  mask-image:url('/landing-logo.png');
+  mask-image:url('/landing-logo.webp');
   mask-size:contain;
   mask-position:center;
   mask-repeat:no-repeat;
@@ -704,10 +704,10 @@ to{
   animation-duration:5s
 }
 .landing-foreground-ship{
-  animation:landing-ship-bob 7s ease-in-out infinite
+  animation:landing-ship-bob 6.5s ease-in-out infinite
 }
 .landing-foam{
-  animation:landing-foam-bob 7s ease-in-out infinite
+  animation:landing-foam-bob 6.5s ease-in-out infinite
 }
 .landing-rays{
   animation-duration:11s
@@ -728,7 +728,7 @@ to{
   transform:translateY(0)
 }
 50%{
-  transform:translateY(-.2%)
+  transform:translateY(-.24%)
 }}
 @keyframes landing-foam-bob{
 0%,100%{
@@ -736,7 +736,7 @@ to{
   opacity:.2
 }
 50%{
-  transform:translateY(-.2%);
+  transform:translateY(-.24%);
   opacity:.65
 }}
 .landing-distant-ship{
@@ -859,7 +859,7 @@ to{
   transform:translateY(0)
 }
 50%{
-  transform:translateY(-.18%)
+  transform:translateY(-.24%)
 }}
 @keyframes landing-caption-type{
 from{
@@ -967,11 +967,11 @@ to{
 }
 .landing-wheel-art{
   inset:3px;
-  background:url('/menu-wheel-transparent-v1.png') center/contain no-repeat;
+  background:url('/menu-wheel-transparent-v1.webp') center/contain no-repeat;
   clip-path:none
 }
 .landing-sailors-art{
-  background:url('/menu-crew-transparent-v1.png') center/110% 110% no-repeat;
+  background:url('/menu-crew-transparent-v1.webp') center/110% 110% no-repeat;
   box-shadow:none
 }
 .landing-menu-controls::before{
@@ -1036,14 +1036,14 @@ to{
 }}
 .landing-sunlight{
   background:radial-gradient(ellipse 6% 9% at 56% 30%,#fff4caf0 0%,#ffd38aa0 28%,transparent 100%),radial-gradient(ellipse 24% 20% at 47% 34%,#ffd09096,transparent 76%);
-  animation:landing-sun-breathe 5.5s ease-in-out infinite
+  animation:landing-sun-breathe 4.5s ease-in-out infinite
 }
 .landing-rays{
   background:conic-gradient(from 215deg at 56% 30%,transparent 0deg,#ffe8b892 10deg,transparent 24deg,#ffe5b073 38deg,transparent 58deg,transparent 360deg);
-  animation:landing-soft-rays 5.5s ease-in-out infinite
+  animation:landing-soft-rays 4.5s ease-in-out infinite
 }
 .landing-weather::before{
-  animation-duration:6s
+  animation-duration:4.8s
 }
 @keyframes landing-sun-breathe{
 0%,100%{
@@ -1097,7 +1097,7 @@ to{
   content:'';
   position:absolute;
   inset:3px;
-  background:url('/menu-accessories-transparent-v1.png') center/110% 110% no-repeat;
+  background:url('/menu-accessories-transparent-v1.webp') center/110% 110% no-repeat;
   clip-path:circle(43%);
   animation:landing-crystal-pulse 4.5s ease-in-out infinite
 }
@@ -1129,7 +1129,7 @@ to{
   content:'';
   position:absolute;
   inset:3px;
-  background:url('/menu-crew-transparent-v1.png') center/110% 110% no-repeat;
+  background:url('/menu-crew-transparent-v1.webp') center/110% 110% no-repeat;
   clip-path:circle(43%);
   animation:landing-crew-glow 6s ease-in-out infinite
 }

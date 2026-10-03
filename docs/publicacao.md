@@ -1,5 +1,11 @@
 # Publicação — Estaleiro Black Desert
 
+Estado da revisão de 03/10/2026: preparação do PR existente #2 e merge em main
+autorizados nesta sessão, após checks/CI. A entrega inclui landing, 21 marinheiros,
+transições e preparação de cenas. Esta autorização não solicita novo deploy nos Sites;
+GitHub e hospedagem são passos distintos. Relatório atual: `qa-revisao-final.md`.
+As seções abaixo preservam o histórico das publicações anteriores.
+
 01/10/2026. Usuário autorizou repositório público no GitHub e hospedagem pública nos Sites do GPT, com card social do logo. Nome definitivo: Estaleiro Black Desert.
 
 ## Preparação
